@@ -153,6 +153,110 @@ primary key(id));
 \copy hokei_mei_kyuui_newcommer from 'hokei_mei_kyuui_newcommer.csv' csv header;
 \copy hokei_sei from 'hokei_sei.csv' csv header;
 
+create table block_a
+(id integer not null,
+ event_id integer not null,
+ time_schedule text not null,
+ before_final integer not null,
+ final integer not null,
+ players_checked integer not null,
+ next_unused_num integer not null,
+ foreign key (event_id) references event_type(id),
+primary key(id));
+
+create table block_a_games
+(id integer not null,
+ schedule_id integer not null,
+ order_id integer not null,
+ game_id integer not null,
+ foreign key (schedule_id) references block_a(id),
+primary key(id));
+
+create table current_block_a
+(id integer not null,
+ game_id integer not null,
+ foreign key (id) references block_a(id));
+
+create table block_b
+(id integer not null,
+ event_id integer not null,
+ time_schedule text not null,
+ before_final integer not null,
+ final integer not null,
+ players_checked integer not null,
+ next_unused_num integer not null,
+ foreign key (event_id) references event_type(id),
+primary key(id));
+
+create table block_b_games
+(id integer not null,
+ schedule_id integer not null,
+ order_id integer not null,
+ game_id integer not null,
+ foreign key (schedule_id) references block_b(id),
+primary key(id));
+
+create table current_block_b
+(id integer not null,
+ game_id integer not null,
+ foreign key (id) references block_b(id));
+
+create table block_c
+(id integer not null,
+ event_id integer not null,
+ time_schedule text not null,
+ before_final integer not null,
+ final integer not null,
+ players_checked integer not null,
+ next_unused_num integer not null,
+ foreign key (event_id) references event_type(id),
+primary key(id));
+
+create table block_c_games
+(id integer not null,
+ schedule_id integer not null,
+ order_id integer not null,
+ game_id integer not null,
+ foreign key (schedule_id) references block_c(id),
+primary key(id));
+
+create table current_block_c
+(id integer not null,
+ game_id integer not null,
+ foreign key (id) references block_c(id));
+
+create table block_d
+(id integer not null,
+ event_id integer not null,
+ time_schedule text not null,
+ before_final integer not null,
+ final integer not null,
+ players_checked integer not null,
+ next_unused_num integer not null,
+ foreign key (event_id) references event_type(id),
+primary key(id));
+
+create table block_d_games
+(id integer not null,
+ schedule_id integer not null,
+ order_id integer not null,
+ game_id integer not null,
+ foreign key (schedule_id) references block_d(id),
+primary key(id));
+
+create table current_block_d
+(id integer not null,
+ game_id integer not null,
+ foreign key (id) references block_d(id));
+
+insert into current_block_a(id, game_id) values (1, 1);
+
+insert into current_block_b(id, game_id) values (1, 1);
+
+insert into current_block_c(id, game_id) values (1, 1);
+
+insert into current_block_d(id, game_id) values (1, 1);
+
 create table awarded_players
 (id integer not null,
 award_name text not null,
