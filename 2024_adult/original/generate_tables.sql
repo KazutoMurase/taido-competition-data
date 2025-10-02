@@ -191,6 +191,7 @@ sub4_score real,
 sub5_score real,
 elapsed_time real,
 penalty real,
+start_penalty real,
 retire integer,
 foreign key (group_id) references tenkai_groups(id),
 primary key(id));
