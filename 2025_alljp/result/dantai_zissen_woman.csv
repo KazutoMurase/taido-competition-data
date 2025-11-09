@@ -1,0 +1,9 @@
+"id","left_group_id","right_group_id","next_left_id","next_right_id","left_group_flag","left_retire","right_retire"
+4,6,7,6,,1,0,0
+1,1,4,5,,1,0,0
+2,9,3,,5,1,0,0
+5,1,9,8,,1,0,0
+3,8,5,,6,1,0,0
+6,6,8,,8,1,0,
+7,9,8,,,1,0,0
+8,1,6,,,1,0,0
