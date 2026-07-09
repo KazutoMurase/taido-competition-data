@@ -480,3 +480,13 @@ insert into current_block_e(id, game_id) values (1, 1);
 insert into current_block_f(id, game_id) values (1, 1);
 
 -- END generated block tables
+
+create table awarded_players
+(id integer not null,
+award_name text not null,
+player_id integer,
+name text,
+foreign key (player_id) references players(id),
+primary key (id));
+
+\copy awarded_players from 'awarded_players.csv' csv header;
