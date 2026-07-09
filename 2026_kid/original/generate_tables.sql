@@ -208,3 +208,99 @@ primary key(id));
 \copy zissen_woman from 'zissen_woman.csv' csv header;
 \copy hokei_woman from 'hokei_woman.csv' csv header;
 \copy hokei_kyuui from 'hokei_kyuui.csv' csv header;
+
+create table dantai_zissen_man_groups
+(id integer not null,
+group_id integer not null,
+name text not null,
+foreign key (group_id) references groups(id),
+primary key(id));
+
+create table dantai_zissen_man
+(id integer not null,
+left_group_id integer,
+right_group_id integer,
+next_left_id integer,
+next_right_id integer,
+left_group_flag integer,
+left_retire integer,
+right_retire integer,
+foreign key (left_group_id) references dantai_zissen_man_groups(id),
+foreign key (right_group_id) references dantai_zissen_man_groups(id),
+primary key(id));
+
+\copy dantai_zissen_man_groups from 'dantai_zissen_man_groups.csv' csv header;
+\copy dantai_zissen_man from 'dantai_zissen_man.csv' csv header;
+
+create table dantai_zissen_woman_groups
+(id integer not null,
+group_id integer not null,
+name text not null,
+foreign key (group_id) references groups(id),
+primary key(id));
+
+create table dantai_zissen_woman
+(id integer not null,
+left_group_id integer,
+right_group_id integer,
+next_left_id integer,
+next_right_id integer,
+left_group_flag integer,
+left_retire integer,
+right_retire integer,
+foreign key (left_group_id) references dantai_zissen_woman_groups(id),
+foreign key (right_group_id) references dantai_zissen_woman_groups(id),
+primary key(id));
+
+\copy dantai_zissen_woman_groups from 'dantai_zissen_woman_groups.csv' csv header;
+\copy dantai_zissen_woman from 'dantai_zissen_woman.csv' csv header;
+
+create table dantai_hokei_groups
+(id integer not null,
+group_id integer not null,
+name text not null,
+foreign key (group_id) references groups(id),
+primary key(id));
+
+create table dantai_hokei
+(id integer not null,
+group_id integer,
+round integer,
+main_score real,
+sub1_score real,
+sub2_score real,
+penalty real,
+retire integer,
+foreign key (group_id) references dantai_hokei_groups(id),
+primary key(id));
+
+\copy dantai_hokei_groups from 'dantai_hokei_groups.csv' csv header;
+\copy dantai_hokei from 'dantai_hokei.csv' csv header;
+
+create table tenkai_groups
+(id integer not null,
+group_id integer not null,
+name text not null,
+foreign key (group_id) references groups(id),
+primary key(id));
+
+create table tenkai
+(id integer not null,
+group_id integer,
+round integer,
+main_score real,
+sub1_score real,
+sub2_score real,
+sub3_score real,
+sub4_score real,
+sub5_score real,
+elapsed_time real,
+penalty real,
+start_penalty real,
+retire integer,
+foreign key (group_id) references tenkai_groups(id),
+primary key(id));
+
+\copy tenkai_groups from 'tenkai_groups.csv' csv header;
+\copy tenkai from 'tenkai.csv' csv header;
+
