@@ -1,7 +1,7 @@
 id,left_player_id,right_player_id,next_left_id,next_right_id,left_player_flag,left_retire,right_retire
 1,16,12,,11,,,
-2,14,19,12,,,,
-3,7,9,,12,,,
+2,14,7,12,,,,
+3,19,9,,12,,,
 4,17,5,,13,,,
 5,15,1,14,,,,
 6,26,8,15,,,,
