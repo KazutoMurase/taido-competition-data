@@ -1,9 +1,0 @@
-id,left_player_id,right_player_id,next_left_id,next_right_id,left_player_flag,left_retire,right_retire
-1,4,5,5,,,,
-2,7,3,,5,,,
-3,1,8,,6,,,
-4,2,6,6,,,,
-5,,,8,,,,
-6,,,,8,,,
-7,,,,,,,
-8,,,,,,,
