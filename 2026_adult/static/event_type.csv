@@ -17,7 +17,7 @@ id,name,name_en,order_id,existence,full_name,description,early_round_type,later_
 15,'女子級位実戦',zissen_kyuui_woman,23,0,'女子級位実戦','','',''
 16,'女子級位法形',hokei_kyuui_woman,24,0,'女子級位法形','','',''
 17,'団体実戦',dantai_zissen,25,0,'団体実戦','','',''
-18,'団体法形',dantai_hokei,12,1,'団体法形競技','※各グループ 1位のみ決勝進出','',''
+18,'団体法形',dantai_hokei,12,1,'団体法形競技','','',''
 19,'団体展開',tenkai,13,1,'団体展開競技','','',''
 20,'級位法形',hokei_kyuui,6,1,'個人法形競技(級位の部)','','体/陰の法形','体/陰の法形'
 21,'壮年実戦男子',zissen_sonen_man,10,1,'個人実戦競技(壮年の部) 男子','','',''
