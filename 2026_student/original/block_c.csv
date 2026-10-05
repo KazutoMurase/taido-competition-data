@@ -1,0 +1,6 @@
+id,event_id,time_schedule,before_final,final,players_checked,next_unused_num
+1,4,9:00-9:40',0,0,0,0
+2,2,9:40-10:35',0,0,0,0
+3,1,10:35-11:15',0,0,0,0
+4,7,11:15-11:35',0,0,0,0
+5,0,'',0,0,0,0
