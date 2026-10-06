@@ -66,3 +66,13 @@ create table notification_request
 \copy event_type from 'event_type.csv' csv header;
 \copy court_type from 'court_type.csv' csv header;
 \copy players from 'players.csv' csv header;
+
+create table awarded_players
+(id integer not null,
+award_name text not null,
+player_id integer,
+name text,
+foreign key (player_id) references players(id),
+primary key (id));
+
+\copy awarded_players from 'awarded_players.csv' csv header;
