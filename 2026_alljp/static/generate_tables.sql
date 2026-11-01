@@ -1,6 +1,7 @@
 create table groups
 (id integer not null,
 name text not null,
+display_order integer not null,
 primary key(id));
 
 create table event_type
