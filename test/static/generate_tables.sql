@@ -1,6 +1,7 @@
 create table test_groups
 (id integer not null,
 name text not null,
+display_order integer not null,
 primary key(id));
 
 create table test_court_type
